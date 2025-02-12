@@ -3,163 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Minecraft Website</title>
+  <title>Minecraft Adventures</title>
   <style>
-    /* Full-screen background video */
-    #video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
+    /* Full-page styling */
+    body, html {
+      margin: 0;
+      padding: 0;
       height: 100%;
-      z-index: -1;
-      object-fit: cover;
-    }
-    /* Styling for the content */<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Minecraft Website</title>
-  <style>
-    /* Full-screen background video */
-    #video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      object-fit: cover;
+      font-family: 'Arial', sans-serif;
     }
 
-    /* Overlay Gradient */
-    .overlay {
+    /* Background Image */
+    .hero {
+      position: relative;
+      background-image: url('https://example.com/minecraft-background.jpg'); /* Replace with a Minecraft image URL */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    /* Overlay for darkening the background */
+    .hero::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
-      z-index: -1;
-    }
-
-    /* Main content styling */
-    .content {
-      position: relative;
-      z-index: 1;
-      color: white;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding-top: 150px;
-      padding: 30px;
       background: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+      z-index: 0;
     }
 
+    /* Heading Styling */
     h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      font-size: 4rem;
+      font-weight: bold;
+      z-index: 1;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     }
 
+    /* Subheading Styling */
     p {
-      font-size: 1.2rem;
-      font-weight: 400;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      font-size: 1.5rem;
+      z-index: 1;
+      margin-bottom: 40px;
+      font-weight: 300;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     }
 
-    /* Buttons styling */
-    .btn {
-      background-color: #ff9c00;
+    /* Call to Action Button */
+    .cta-button {
+      background-color: #3a8f58; /* Minecraft Green */
+      padding: 20px 40px;
+      font-size: 1.2rem;
       color: white;
-      padding: 15px 30px;
       border: none;
       border-radius: 5px;
-      font-size: 1.1rem;
       cursor: pointer;
-      margin-top: 20px;
       transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #f57c00;
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- Video Background -->
-  <video id="video-background" autoplay loop muted>
-    <source src="minecraft-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Overlay for Darkened Effect -->
-  <div class="overlay"></div>
-
-  <!-- Website Content -->
-  <div class="content">
-    <h1>Welcome to My Minecraft World</h1>
-    <p>Explore mods, animations, and more!</p>
-    <button class="btn" onclick="window.location.href='https://www.minecraft.net'">Visit Minecraft</button>
-  </div>
-
-</body>
-</html>
-
-    .content {
-      position: relative;
       z-index: 1;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 150px;
     }
+
+    .cta-button:hover {
+      background-color: #2f6a43; /* Darker green */
+    }
+
+    /* Section Styling */
+    .features {
+      background-color: #f4f4f4;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .feature-item {
+      display: inline-block;
+      width: 30%;
+      margin: 0 15px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .feature-item img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #2d2d2d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
   </style>
 </head>
 <body>
 
-  <!-- Video Background -->
-  <iframe id="video-background" src="https://www.youtube.com/embed/MmB9b5njVbA?autoplay=1&mute=0&loop=1&playlist=MmB9b5njVbA" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-  
-  <!-- Website Content -->
-  <div class="content">
-    <h1>Welcome to My Minecraft World</h1>
-    <p>Explore mods, animations, and more!</p>
-  </div>
+  <!-- Hero Section (Minecraft Background) -->
+  <section class="hero">
+    <h1>Welcome to Minecraft Adventures</h1>
+    <p>Explore, Build, Survive - A World Full of Possibilities</p>
+    <button class="cta-button" onclick="window.location.href='https://www.minecraft.net'">Play Now</button>
+  </section>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Minecraft Site</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Welcome to the Future of Minecraft</h1>
-            <p>Explore, Build, and Survive like never before!</p>
-        </header>
-
-        <section class="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Real-time Multiplayer</li>
-                <li>Futuristic Designs</li>
-                <li>Advanced World Generation</li>
-            </ul>
-        </section>
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Explore Minecraft Features</h2>
+    <div class="feature-item">
+      <img src="https://example.com/survival-icon.png" alt="Survival">
+      <h3>Survival Mode</h3>
+      <p>Test your survival skills in a world of endless possibilities.</p>
     </div>
+    <div class="feature-item">
+      <img src="https://example.com/creative-icon.png" alt="Creative">
+      <h3>Creative Mode</h3>
+      <p>Unleash your creativity and build anything you can imagine!</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://example.com/multiplayer-icon.png" alt="Multiplayer">
+      <h3>Multiplayer</h3>
+      <p>Team up with friends or play in exciting online servers.</p>
+    </div>
+  </section>
 
-    <div id="bg-animation"></div>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Minecraft Adventures | All Rights Reserved</p>
+  </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
